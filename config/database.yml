@@ -7,7 +7,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: db/development
+  database: flashcards_development
   pool: 5
 
 
@@ -18,5 +18,5 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: db/test
+  database: flashcards_test
   pool: 5
