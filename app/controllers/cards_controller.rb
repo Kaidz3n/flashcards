@@ -3,7 +3,10 @@ class CardsController < ApplicationController
     @cards = Card.all
   end
 
-  def show
-    @article = Card.find(params[:id])
+  #def show
+  #  @card = Card.find(params[:id])
+  #end
+
+  def new
   end
 end
