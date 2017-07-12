@@ -1,20 +1,6 @@
-<%= form_for @card do |f| %>
-	<div class="form-control">
-		<%= f.label :original_text %>
-		<%= f.text_field :original_text %>
-	</div>
-
-	<div class="form-control">
-		<%= f.label :translated_text %>
-		<%= f.text_field :translated_text %>
-	</div>
-
-	<div class="form-control">
-		<%= f.label :review_date %>
-		<%= f.date_field :review_date %>
-	</div>
-
-	<div class="form-control">
-	<%= f.submit 'Сохранить' %>
-	</div>
+<%= simple_form_for @card do |f| %>
+	<%= f.input :original_text, :hint => "Type english word" %>
+	<%= f.input :translated_text, :hint => "Введите перевод слова на русском" %>
+	<%= f.input :review_date %>
+	<%= f.button :submit %>
 <% end %>
