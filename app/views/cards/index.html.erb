@@ -3,14 +3,13 @@
     <h1 class="text-center">Карточки</h1>
   </div>
  
-<table>
-  <tr>
-    <th>Список карточек</th> 
-  </tr>
- 
-  <% @cards.each do |card| %>
+  <table>
     <tr>
-      <td><%= link_to card.original_text, card_path(card) %></td>
+      <th>Список карточек</th> 
     </tr>
-  <% end %>
-</table>
+  </table>
+
+  <%= render @cards %> 
+
+</section>
+
