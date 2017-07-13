@@ -1,6 +1,6 @@
 <%= simple_form_for @card do |f| %>
 	<%= f.input :original_text, :hint => "Type english word" %>
-	<%= f.input :translated_text, :hint => "Введите перевод слова на русском" %>
+	<%= f.input :translated_text, :hint => "Введите перевод слова кириллицей" %>
 	<%= f.input :review_date %>
-	<%= f.button :submit %>
+	<%= f.button :submit, 'Создать карточку' %>
 <% end %>
