@@ -3,16 +3,13 @@
     <h1 class="text-center">Карточки</h1>
   </div>
  
-<table>
-  <tr>
-    <th>Original</th> 
-    <th>Translate</th>
-  </tr>
- 
-  <% @cards.each do |card| %>
+  <table>
     <tr>
-      <td><%= card.original_text %></td>
-      <td><%= card.translated_text %></td>
+      <th>Список карточек</th> 
     </tr>
-  <% end %>
-</table>
+  </table>
+
+  <%= render @cards %> 
+
+</section>
+

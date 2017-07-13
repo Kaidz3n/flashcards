@@ -1,0 +1,9 @@
+<h1><%= @card.original_text %></h1>
+
+<h1><%= @card.translated_text %></h1>
+
+<h1><%= @card.review_date %></h1>
+
+<%= link_to 'Изменить', edit_card_path(@card) %>
+
+<%= link_to 'Удалить', card_path(@card), method: :delete, data: { confirm: 'Вы уверены?'} %>
