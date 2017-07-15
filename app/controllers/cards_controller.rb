@@ -1,9 +1,9 @@
 class CardsController < ApplicationController
-	
+
 	before_action :set_card, only: [:show, :edit, :update, :destroy]
 
 	def index
-    @cards = Card.all
+    @cards = Card.published(Time.now)
   end
 
   def show
