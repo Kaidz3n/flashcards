@@ -3,7 +3,7 @@ class CardsController < ApplicationController
 	before_action :set_card, only: [:show, :edit, :update, :destroy]
 
 	def index
-    @cards = Card.published(Time.now)
+    @cards = Card.expires(Time.now)
   end
 
   def show
