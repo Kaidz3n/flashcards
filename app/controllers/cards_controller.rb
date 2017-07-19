@@ -6,6 +6,17 @@ class CardsController < ApplicationController
     @cards = Card.expires(Time.now)
   end
 
+	def perform
+		@card = Card.find(params[:id])
+		puts params[:q]
+		if @q == @card.original_text
+			flash[:notice] = "Right!"
+			redirect_to @cards
+		else
+			flash[:notice] = "Error!"
+			redirect_to @cards
+	end
+
   def show
   end
 

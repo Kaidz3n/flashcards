@@ -3,12 +3,15 @@
     <h1 class="text-center">Карточки</h1>
   </div>
 
-  <table>
-    <tr>
-      <th>Список карточек</th>
-    </tr>
-  </table>
 
-  <%= render @cards %>
+<%= render @cards %>
+
+  <%= form_tag cards_path do %>
+
+    <%= text_field_tag :q %>
+
+    <button>Отправить</button>
+
+  <% end %>
 
 </section>

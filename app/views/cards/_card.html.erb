@@ -1,5 +1,6 @@
 <table>
 	<tr>
 		<td><%= link_to card.original_text, card_path(card) %></td>
+		<td><%= hidden_field_tag card.id %></td>
 	</tr>
 </table>
