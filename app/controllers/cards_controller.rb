@@ -11,6 +11,7 @@ class CardsController < ApplicationController
 		puts params[:q]
 		if @q == @card.original_text
 			flash[:notice] = "Right!"
+			@review_date = Time.now + 3.days
 			redirect_to @cards
 		else
 			flash[:notice] = "Error!"
